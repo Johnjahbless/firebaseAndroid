@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context=".MainActivity"
+        tools:showIn="@layout/activity_main">
+
+    <ImageView
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/imageView"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:src="@drawable/file"/>
+
+    <VideoView
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:id="@+id/videoView"/>
+    <Button
+            android:id="@+id/startUpload"
+            android:background="@color/colorPrimary"
+            android:padding="@dimen/fab_margin"
+            android:textColor="#fff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start Upload"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+<TextView
+        app:layout_constraintTop_toBottomOf="@id/startUpload"
+        android:id="@+id/fileUrl"
+        android:layout_margin="@dimen/fab_margin"
+        android:layout_width="match_parent"
+        android:autoLink="web"
+        android:textAlignment="center"
+        android:text="file url will appear here after upload is successful"
+        android:textColor="#673AB7"
+          android:layout_height="wrap_content"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
